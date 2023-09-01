@@ -88,6 +88,12 @@ const App = ({ signOut }) => {
             variation="quiet"
             required
           />
+          <View
+            name="image"
+            as="input"
+            type="file"
+            style={{ alignSelf: "end" }}
+          />
           <Button type="submit" variation="primary">
             Create Note
           </Button>
@@ -95,12 +101,6 @@ const App = ({ signOut }) => {
       </View>
 
       <Heading level={2}>Current Notes</Heading>
-      <View
-        name="image"
-        as="input"
-        type="file"
-        style={{ alignSelf: "end" }}
-      />
       <View margin="3rem 0">
         {notes.map((note) => (
           <Flex
